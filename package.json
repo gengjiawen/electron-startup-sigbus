@@ -1,0 +1,24 @@
+{
+  "name": "electron-41-startup-sigbus-forge-repro",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Minimal Electron Forge repro for a startup SIGBUS on macOS with Electron 41.1.0",
+  "main": "./out/main/index.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "repro:bin": "node_modules/electron/dist/Electron.app/Contents/MacOS/Electron out/main/index.js",
+    "repro:check": "node ./scripts/check-repro.cjs"
+  },
+  "dependencies": {
+    "@electron-toolkit/preload": "3.0.2",
+    "@electron-toolkit/utils": "4.0.0",
+    "xlsx": "0.18.5"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "7.11.1",
+    "@electron-forge/maker-zip": "7.11.1",
+    "electron": "41.1.0"
+  }
+}
